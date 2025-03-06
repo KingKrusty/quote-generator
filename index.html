@@ -20,10 +20,20 @@
         const name = document.getElementById("name").value;
         const goal = document.getElementById("goal").value;
         const templates = [
-            `${name}, every step toward ${goal} is a victory—keep pushing!`,
-            `Hey ${name}, ${goal} won’t chase itself—go get it!`,
-            `${name}, you’ve got this—${goal} is just the beginning!`
-        ];
+    `${name}, every step toward ${goal} is a victory—keep pushing!`,
+    `Hey ${name}, ${goal} won’t chase itself—go get it!`,
+    `${name}, you’ve got this—${goal} is just the beginning!`,
+    `${name}, the road to ${goal} is paved with grit—keep going!`,
+    `No one but ${name} can make ${goal} happen—own it!`,
+    `${name}, ${goal} is your mountain—climb it one step at a time!`,
+    `Hey ${name}, dream big, act now—${goal} awaits!`,
+    `${name}, turn ${goal} into reality—start today!`,
+    `${name}, ${goal} isn’t a wish—it’s a mission. Get after it!`,
+    `Rise up, ${name}—${goal} is yours to conquer!`,
+    `${name}, small wins today bring ${goal} tomorrow—stay at it!`,
+    `Hey ${name}, ${goal} is calling—answer with action!`,
+    `${name}, believe in yourself—${goal} is closer than you think!`
+];
         const randomQuote = templates[Math.floor(Math.random() * templates.length)];
         document.getElementById("quote").innerText = randomQuote || "Please enter your name and goal!";
     }
