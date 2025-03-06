@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input, button { padding: 10px; margin: 5px; }
+        #quote { margin-top: 20px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Get Your Motivational Quote</h1>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="goal" placeholder="Your Goal">
+    <button onclick="generateQuote()">Generate Quote</button>
+    <div id="quote"></div>
+<script>
+    function generateQuote() {
+        const name = document.getElementById("name").value;
+        const goal = document.getElementById("goal").value;
+        const templates = [
+            `${name}, every step toward ${goal} is a victory—keep pushing!`,
+            `Hey ${name}, ${goal} won’t chase itself—go get it!`,
+            `${name}, you’ve got this—${goal} is just the beginning!`
+        ];
+        const randomQuote = templates[Math.floor(Math.random() * templates.length)];
+        document.getElementById("quote").innerText = randomQuote || "Please enter your name and goal!";
+    }
+</script>
+</body>
+</html>
